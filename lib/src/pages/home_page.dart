@@ -1,4 +1,4 @@
-import 'package:componentes/src/pages/alert_page.dart';
+
 import 'package:componentes/src/pages/providers/menu_provider.dart';
 import 'package:componentes/src/utils/icono_string_utils.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Compoentes')
+        title: Text('Componentes')
       ),
       body: _lista(),
           );
@@ -46,14 +46,7 @@ class HomePage extends StatelessWidget {
           leading: Icon(Icons.account_circle) ,
           trailing: getIcon(opt['icon']),
           onTap: () {
-            // final route = MaterialPageRoute(
-            //   builder: (context){
-            //     return AlertPage();
-            //   },
-
-            //   );
-            // Navigator.push(context, route);
-
+            
             Navigator.pushNamed(context, opt['ruta']);
           },
         );
