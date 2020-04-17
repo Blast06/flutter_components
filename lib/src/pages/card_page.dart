@@ -24,6 +24,9 @@ Widget _cardTipo1() {
 
 
   return Card(
+    clipBehavior: Clip.antiAlias,
+    elevation: 0.7,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
     child: Column(
       children: <Widget>[
         ListTile(
@@ -52,7 +55,9 @@ Widget _cardTipo1() {
 
 Widget _cardTipo2() {
 
-  return Card(
+  final card =  Card(
+    elevation: 0.5,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
     child: Column(
       children: <Widget>[
 
@@ -73,6 +78,27 @@ Widget _cardTipo2() {
     ),
   );
 
+  return Container(
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(30.0),
+      boxShadow:<BoxShadow>[
+        BoxShadow(
+          color: Colors.black26,
+          blurRadius: 10.0,
+          spreadRadius: 2.0,
+          offset: Offset(2.0, 10.0)
+           )
+      ],
+    ),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(30.0),
+      child: card,
+    ),
+  );
+
+
 }
+
+
 
 }
